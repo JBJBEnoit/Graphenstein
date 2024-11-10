@@ -6,6 +6,8 @@ compiled to WebAssembly, vanilla JavaScript, HTML and CSS (hence the Frankenstei
 This project runs on a web browser as a mainly client-side application. It does, however,
 require a server to run properly (running it from a localhost works fine).
 
+[Try Out Graphenstein](https://jbjbenoit.github.io/Graphenstein/)
+
 To get started:
 - Add a number of nodes for your graph. Nodes will appear in the main window, and can be dragged into whatever configuration you choose
 - Add edges to your graph.
