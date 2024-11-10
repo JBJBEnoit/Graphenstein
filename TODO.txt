@@ -1,0 +1,8 @@
+Make GUI responsive!!
+
+Write documentation for running + include in site
+-> need to run from server, so localhost with either python or node.js
+-> more in-depth comments
+-> more description, with links, about the different algos
+
+Set up the repo on GitHub

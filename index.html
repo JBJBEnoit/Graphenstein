@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="eng-us">
+    <head>
+        <meta http-equiv="content-type" content="text/html; UTF-8" />
+            <title>Graphenstein - Graph Algorithms Brought To Life</title>
+        <meta http-equiv="content-type" content="text/html; UTF-8" />
+        <meta name="author" content="Jason E. Benoit" />
+        <meta name="description" content="Explore graph algorithms interactively! Under the hood, this webapp combines Javascript with C++ via Emscripten/WebAssembly ... Make this Frankenstein's monster dance while enjoying visualizations of major graph algorithms!" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" media="screen" href="main.css" />
+        <script type="text/javascript" src="graph.js"></script>
+        <script type="text/javascript" src="scripts.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <header>
+            <h1>GRAPHENSTEIN</h1>
+        </header>
+        <content>
+            <div id="uiOuter">
+                <button id="graphBuilderBtn" class="tabBtn btnActive">Graph Builder</button>
+                <button id="algoBtn" class="tabBtn">Algorithms</button>
+                <div id="algo" class="ui hideUI">
+                    <label for="algoSel" id="algoSelLbl">Algorithm: </label>
+                    <select id="algoSel" class="drpDwn"></select>
+                    <div id="algoIn"></div>
+                    <div id="algoResults"></div>
+                    <div id="animBtnDiv"></div>
+                </div>
+                <div id="graphBuilder" class="ui">
+                    <span id="numNodesInput"><label for="numNodesTxt" id="numNodesLbl">Number of Vertices: </label></span>
+                    <input type="text" id="numNodesTxt" size="5" class="inTxt" onclick="this.select();">
+                    <div id="edgeContainer">
+                        <div id="edgeUI"></div>
+                        <button id="addEdge">Add Edge</button>
+                    </div>
+                    <br />
+                    <input type="checkbox" id="isDirected">
+                    <label for="isDirected" id="directedLbl">Directed Graph</label>
+                    <br />
+                    <input type="checkbox" id="isWeighted">
+                    <label for="isWeighted" id="weightedLbl">Weighted Edges</label>
+                </div>
+                
+            </div>
+            <div id="canvDiv">
+                <canvas id="cnv" height="10000" width="10000"></canvas>
+            </div>
+            <div id="scaleDiv">
+                <label for="scaleInpt" id=scaleInptLbl>Zoom: </label>
+                <input type="range" id="scaleInpt" min="20" max="180" value="100" size="3">
+            </div>
+                
+        </content>
+        
+    </body>
+</html>

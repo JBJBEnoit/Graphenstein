@@ -1,0 +1,360 @@
+header, section, canvas {
+    display: block;
+}
+
+body {
+    background: black;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    color: limegreen;
+}
+
+label {
+    color: limegreen;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 50%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 50%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: limegreen;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 25px;
+  width: 16px;
+  border-radius: 3px;
+  background: limegreen;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: limegreen;
+}
+input[type=range]::-moz-range-track {
+  width: 50%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: limegreen;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: limegreen;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 50%;
+  height: 8.4px;
+  cursor: pointer;
+  background: limegreen;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: limegreen;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: limegreen;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: limegreen;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: limegreen;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: limegreen;
+}
+
+/* Don't show canvas zoom slider on touchscreen devices */
+/*@media (hover: none){
+    input[type=range]{
+        display: none;
+    }
+    #scaleInptLbl {
+        display: none;
+    }
+}*/
+
+
+
+header h1 {
+    font-family: Creepster, sans-serif;
+    font-size: 500%;
+    color: limegreen;
+    margin-top: 0;
+    margin-bottom: 5vh;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    animation-name: headerIntro;
+    animation-duration: 3s;
+    animation-direction: normal;
+}
+
+content {
+    
+    animation-name: canVis;
+    animation-duration: 3s;
+    animation-direction:normal;
+    
+
+}
+
+.ui {
+    border: 1px solid limegreen;
+    border-radius: 5%;
+    padding: 1rem;
+    animation-name: canVis;
+    animation-duration: 3s;
+    animation-direction: normal;
+    display: block;
+    visibility: visible;
+    background: black;
+    z-index: 100;
+    margin-left: 1rem;
+    border-top-left-radius: 0;
+    height: 328px;
+    overflow: hidden;
+}
+
+#edgeUI {
+    margin-bottom: 0.5rem;
+}
+
+#algoIn {
+    margin-top: 1rem;
+}
+
+#algoResults {
+    color: limegreen;
+}
+
+.tab {
+    height: 0.9rem;
+    background: black;
+    z-index: 1000;
+    position: absolute;
+    border-radius: 15%;
+    border-bottom-left-radius: 4%;
+    border-bottom-right-radius: 0;
+    border: 1px solid limegreen;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+    color: limegreen;
+    padding: 1em;
+    top: 14vh;
+    left: 1rem;
+}
+
+#algoTab {
+    left: 8.5rem;
+
+}
+
+.back {
+    z-index: -5;
+}
+
+#edgeContainer {
+    border: 1px solid limegreen;
+    border-radius: 5%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#algoIn {
+    border: 1px solid limegreen;
+    border-radius: 5%;
+    padding: 1rem;
+}
+
+#runAlgo {
+    margin-top: 1rem;
+}
+
+#animPlayBtn {
+    margin-top: 1rem;
+}
+
+#uiOuter {
+    grid-area: graphBuilder;
+    z-index: 100;
+    position: relative;
+    min-width: 19rem;
+}
+
+#graphBuilderBtn {
+    margin-left: 1rem;
+}
+
+#scaleDiv {
+    grid-area: scaleDiv;
+    margin-left: 50%;
+    transform: translateX(-30%);
+}
+
+.tabBtn {
+    
+    background: black;
+    color: limegreen;
+    border-color: limegreen;
+    animation: canVis;
+    animation-duration: 3s;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-bottom: none;
+    font-size: 150%;
+    font-family: Creepster, sans-serif;
+}
+
+.btnActive {
+    background: limegreen;
+    color: black;
+}
+
+#graphBuilder {
+    margin-left: 1rem;
+    min-width: 350px;
+    text-align: center;
+}
+
+#algo {
+   margin-left: 1rem;
+    min-width: 350px;
+    text-align: center; 
+}
+
+#algoResults {
+    margin-top: 0.5rem;
+    max-height: 10rem;
+    overflow-y: auto;
+}
+
+#edgeUI {
+    height: 10rem;
+    overflow-y: auto;
+}
+
+.delEdgeBtn {
+    
+    font-weight: bold;
+    background-color: #eb6c63;
+}
+
+#addEdge {
+/*
+    margin-left: 50%;
+    transform: translateX(-50%);
+*/
+    width: 65%;
+    background-color: limegreen;
+    
+}
+
+.drpDwnOpt {
+    background-color: #faeeb9;
+}
+
+.drpDwnOpt: disabled {
+    background-color: #faeeb9;
+}
+
+.drpDwn {
+    
+    background-color: #faeeb9;
+}
+
+.inTxt {
+    background-color: #faeeb9;
+    margin-bottom: 1rem;
+}
+
+.weightTxt:enabled {
+    background-color: #faeeb9;
+}
+
+.drpDwnEdgeLbl {
+    margin-left: 0.5em;
+}
+
+.hideUI {
+    visibility: collapse;
+    height: 0;
+    padding: 0;
+}
+
+
+@keyframes headerIntro {
+    0% {visibility:hidden;}
+    10% {/*transform: translateY(300vh);*/ visibility: hidden;}
+    11% {transform: scale(0%) /*translateY(300vh)*/; visibility: visible; top: 50vh;}  
+    100% {transform: scale(100%); top: 0vh;}  
+}
+
+#canvDiv {
+    grid-area: canvDiv;
+    height: 400px;
+/*    width: 800px;*/
+    width: 90%;
+    overflow: hidden;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5%;
+    cursor: grab;
+
+}
+
+@keyframes canVis {
+    0% {visibility: hidden;}
+    99% {visibility: hidden;}
+    100% { visibility: visible;}
+}
+
+
+@media screen and (min-width: 1075px){
+    
+    content {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 35% 65%;
+        grid-template-areas: 'graphBuilder canvDiv'
+                             'blank scaleDiv';
+    }
+    
+}
+
